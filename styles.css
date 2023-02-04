@@ -1,0 +1,85 @@
+body {
+    background-color: #000000;
+  }
+  
+  #terminal {
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Iosevka Nerd', sans-serif;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+#prompt-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+#prompt {
+    font-size: 15px;
+    font-weight: bold;
+    width: 200px;
+}
+
+#prompt:after {
+    animation: blink 1s step-end infinite;
+    font-size: inherit;
+}
+
+p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Iosevka Nerd', sans-serif;
+}
+
+#input {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-family: 'Iosevka Nerd', sans-serif;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: pre;
+    line-height: 20px;
+    overflow: hidden;
+    margin-left: -3-px;
+    resize: none;
+    margin-top: 20px;
+}
+
+.cursor {
+    position: absolute;
+    left: 25px;
+    background-color: white;
+    width: 2px;
+    height: 20px;
+    animation: blink 1s step-end infinite;
+}
+
+.cursor.active {
+    visibility: hidden;
+}
+
+#input {
+    flex-grow: 1;
+    animation: blink 0.01s infinite 2;
+}
+
+#input::selection {
+    animation: blink 0.5s step-end infinite;
+}
+
+@font-face {
+    font-family: 'Iosevka Nerd';
+    src: url('iosevka-nerd.ttf') format('truetype'),
+         url('path/to/IosevkaNerd.woff') format('woff'),
+         url('path/to/IosevkaNerd.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
